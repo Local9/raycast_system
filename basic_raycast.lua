@@ -1,5 +1,6 @@
 -- // code by slim#0001
 -- // help with raycast viktorelmer#9834
+-- // Русские которые пишут на ESX, пожалуйста, не используйте мой код, вы говноеды!
 
 local isCursorShowing = false
 local uiHasFocus = false
