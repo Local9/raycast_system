@@ -105,11 +105,11 @@ Citizen.CreateThread(function()
         local hit, coords, entity = RayCastGamePlayCamera(10.0,-1)
         local gp = GetPlayerPed(-1)
         if hit and (IsEntityAVehicle(entity)) then
-            local position = GetEntityCoords(gp) -- gp this global GetPlayerPed(-1)
+            local position = GetEntityCoords(gp) 
             local entitypos = GetEntityCoords(entity)
             if IsEntityAVehicle(entity) and GetDistanceBetweenCoords(position.x, position.y, position.z, entitypos.x, entitypos.y, entitypos.z, true) < 4 then -- Get Player, and check distance with ped
                 if not IsPedInAnyVehicle(gp) then
-                    DrawText3Ds(entitypos.x, entitypos.y, entitypos.z, "Vehicle: [~g~G~s~]") -- this function in end code             
+                    DrawText3Ds(entitypos.x, entitypos.y, entitypos.z, "Vehicle: [~g~G~s~]")            
                     if IsControlJustPressed(1, 68) and uiHasFocus and isCursorShowing then -- RIGHT BUTTON
                         --tvRP.notify("~g~This a ped :)")
                         print("THIS IS A VEHICLE")
@@ -117,12 +117,12 @@ Citizen.CreateThread(function()
 				end
             end
         elseif hit and (IsEntityAPed(entity)) and gp ~= entity then
-            local position = GetEntityCoords(gp) -- gp this global in vrp GetPlayerPed(-1)
+            local position = GetEntityCoords(gp) 
             local entitypos = GetEntityCoords(entity)
             hit, coords, entity = RayCastGamePlayCamera(10.0,4)
             if IsEntityAPed(entity) and GetDistanceBetweenCoords(position.x, position.y, position.z, entitypos.x, entitypos.y, entitypos.z, true) < 5 then -- Get Player, and check distance with ped
                 if not IsPedInAnyVehicle(gp) then
-                    DrawText3Ds(entitypos.x, entitypos.y, entitypos.z, "Ped: [~g~G~s~]") -- this function in end code
+                    DrawText3Ds(entitypos.x, entitypos.y, entitypos.z, "Ped: [~g~G~s~]") 
                     if IsControlJustPressed(1, 68) and uiHasFocus and isCursorShowing then -- RIGHT BUTTON
                         --tvRP.notify("~g~This a ped :)")
                         print("THIS IS A PED")
